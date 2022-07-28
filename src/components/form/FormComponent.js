@@ -14,15 +14,19 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({info,setinfo}) => {
+const FormComponent = ({info, setInfo,handleSubmit}) => {
 
-    const handleChange=(e)=>{
-      e.preventDefault();
-      //const name=e.target.name;
-      //const values=e.target.value;
-      const {name,values}=e.target
-      
-    }
+  const handleChange = (e) => {
+
+    e.preventDefault()
+    // const name = e.target.name;
+    // const value = e.target.value;
+
+    const {name, value} = e.target;
+    // console.log(name, value);
+    setInfo({...info, [name] : value})
+    console.log(info);
+  }
   return (
     <Grid
       textAlign="center"
