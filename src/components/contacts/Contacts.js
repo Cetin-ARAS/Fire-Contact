@@ -9,9 +9,10 @@ import {
   Paper
 } from "@mui/material";
 
-
+import {useFetch} from "../../utils/functions";
 
 const Contacts = () => {
+  const {İsloading,contactList}=useFetch();
  
   return (
     <div>
@@ -28,7 +29,8 @@ const Contacts = () => {
             </TableRow>
           </TableHead>        
          
-          <TableBody>           
+          <TableBody> 
+                      
               <TableRow>
               <TableCell textAlign="center"></TableCell>
               <TableCell textAlign="center"></TableCell>
